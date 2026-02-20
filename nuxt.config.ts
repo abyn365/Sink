@@ -53,6 +53,9 @@ export default defineNuxtConfig({
     '/*.json': {
       headers: { 'Cache-Control': 'public, max-age=2592000, immutable' },
     },
+    '/**/_payload.json': {
+      headers: { 'Cache-Control': 'no-store, no-cache, must-revalidate' },
+    },
     '/*.geojson': {
       headers: { 'Cache-Control': 'public, max-age=2592000, immutable' },
     },
